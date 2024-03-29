@@ -1,14 +1,12 @@
-# Overview
-
-A demo project simulating a coin sorter - the kind you can dump a pocketful of change into and it automatically separates them into separate silos, like this example: ![](./coin_sorter_example.png)
-
 ## Purpose
 
 This project demonstrates usage of the AWS EventBus service. You will see go through three deployments and see examples of:
 - Sending events to the event bus and discreetly routing them via event rules
 - Reprocessing events from the event archive
-- Region-redundant event buses with automated failover and single-endpoint publishing.
 
+## Overview
+
+A demo project simulating a coin sorter - the kind you can dump a pocketful of change into and it automatically separates them into separate silos, like this example: ![](./coin_sorter_example.png)
 
 ## Requirements
 
@@ -20,7 +18,7 @@ You will need:
 - The publish script is written in bash, but may work in PowerShell also.
 
 ## Disclaimer
-Although the services used in this tutorial might be inexpensive to most, they are not free. I am not responsible for any charges you incur in your account. 
+Although the services used in this tutorial might be inexpensive to most, they are not free. I am not responsible for any charges you incur. 
 
 Services used in this demo project include:
 - SQS
