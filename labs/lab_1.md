@@ -57,7 +57,7 @@ So let's try it! Execute the tester script to send some coins to the event bus:
 ```sh
 # activate the python venv
 $ source .venv/bin/activate
-$ python tester.py -cc 10
+$ python tester.py -cc 100
 {'type': 'penny', 'year': 1930}
 {'type': 'nickel', 'year': 2014}
 {'type': 'penny', 'year': 1943}
@@ -70,7 +70,8 @@ $ python tester.py -cc 10
 {'type': 'nickel', 'year': 1976}
 ```
 You should now see messages available in your SQS console.  
-_**Note that your messages may not add up to 10 because the script also generates some 'dollar' coins, which we are not handling yet.**_
+_**Note that your messages may not add up to 100 because the script also generates some 'dollar' coins, which we are not handling yet.**_  
+
 ![sqs example](sqs_with_coins.png)  
 
 Run a few more tests with varying amounts of coins. 
@@ -79,7 +80,4 @@ Purging queues and sending 100 coins:
 `python tester.py -p -cc 100`  
 
 # Lab 1 Complete!
-New you've seen some basic usage of Event Bus. You can proceed to [Lab 2 - Archiving and Event Replay](lab_2.md), or if you are done, teardown with:
-```sh
-./destroy.sh
-```
+New you've seen some basic usage of Event Bus. Please proceed to [Lab 2 - Archiving and Event Replay](lab_2.md).
