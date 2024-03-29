@@ -9,3 +9,5 @@ primary_region: us-east-1
 secondary_region: us-west-2
 project: coin-sorter
 ```
+
+[Back](../README.md)

@@ -20,12 +20,18 @@ $ python tester.py -cc 100
 ...
 ...
 ```
-In lab 1 we created some events for various coin types, including a 'dollar' coin, but there was no rule or target for handling dollar coins. We are going to use an event replay to catch those coins, but it can take a few minutes for events to make it to the event bus archive, so go take a 5-10 minute break. Go fill a cup/mug/chalice/stein with your favorite beverage, I like coffee myself, then wend your way back here.  
+In lab 1 we created some events for various coin types, including a 'dollar' coin, but there was no rule or target for handling dollar coins. Thank goodness we also created an event archive! We are going to replay events from the archive to recover those dollars. It can take a few minutes for events to make it to the archive, so take a 5-10 minute break. Go fill a cup/mug/chalice/stein with your favorite beverage, I like coffee myself, then wend your way back here.  
 
 To ensure the archive is ready you should see "Size in bytes" appear as anything greater than 0.  
 ![archive size](lab_2_event_bus_archive_size.png)  
 
-Now let's do a replay! Select the archive and then the Replay button. Enter your settings similar to below (adjusting for date). Notice that you can select replaying events to ALL rules or just a subset of rules, in this case we want to catch those dollars we missed so we are going to select only the dollar event rule:  
+Now let's do a replay! Select the archive and then the Replay button. Enter your settings similar to below (adjusting for date). Notice that you can select replaying events to ALL rules or just a subset of rules, in this case we only want to catch those dollars we missed so select the dollar event rule:  
 ![replay settings](lab_2_replay_settings.png)  
 Now click "Start Replay". It may take a few moments to start, but should complete quickly. If you check SQS now you should see that the dollar queue has your missing money.  
 ![dollars found! Scrooge McDuck is happy!](lab_2_sqs_result.png)  
+
+# Lab 2 Complete!
+When you're done playing with tester.py and replays, make sure to clean up.
+```sh
+./destroy.sh
+```
